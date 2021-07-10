@@ -349,7 +349,37 @@ These are notes from the course [Learning to Learn [Efficient Learning] : Zero t
     - Define Practice drills or tests
     - Attach stakes/rewards to it
     - Use Pomodoro technique
-    
+---
+
+### Recommended Books
+
+Seth Godin - The Dip
+Rober Greene - Mastery
+Josh Waitzkin - The Art of Learning
+Shane Snow - Smartcuts
+Ryan Holiday - Obstacle is the Way
+Barbara Oakley - Learning How to Learn
+Matthew Walker - Why We Sleep
+Anders Ericsson - Peak
+Daniel Kahneman - Thinking Fast and Slow
+Charles Duhigg - The Power of Habit
+Brian Tracy - Eat that Frog!
+Joshua Foer - Moonwalking With Einstein
+Cal Newport - Deep Work
+Cal Newport - So Good They Can’t Ignore You
+Neil Strauss - Emergency
+Scott Adams - How to fail at almost everything and still win big
+Daniel Pink - Drive
+Scott Young - Ultralearning
+Tim Ferris - All books
+Josh Kaufman - The first 20 hours
+Steven Pinker- How the Mind Works
+Peter Brown, Henry Roediger & Mark McDaniel - Make it Stick
+Kevin Horsely - Unlimited Memory
+Carol Dweck - Mindset
+Robert Maurer Ph.D. - Kaizen
+James Clear - Atomic Habits
+
 ---
    
 Happy Learning!!
