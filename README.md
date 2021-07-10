@@ -333,9 +333,8 @@ These are notes from the course [Learning to Learn [Efficient Learning] : Zero t
 
 
 Happy Learning!!
-[Learning](https://i.giphy.com/media/8dYmJ6Buo3lYY/source.gif)
+![Learning](https://i.giphy.com/media/8dYmJ6Buo3lYY/source.gif)
 
 You can connect with me at &nbsp;
 [LinkedIn](https://www.linkedin.com/in/abh1navv)
-[Twitter/@abh1navv]
-(https://www.twitter.com/abh1navv)
+[Twitter/@abh1navv](https://www.twitter.com/abh1navv)
