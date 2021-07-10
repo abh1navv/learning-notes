@@ -325,16 +325,32 @@ These are notes from the course [Learning to Learn [Efficient Learning] : Zero t
     - the more time you give yourself to finish a task, the longer it is going to take
     - set small targets and define an optimal deadline
     - practice deep work - use Pomodoro technique for small targets
-
-
-
+14. **Deep work**
+    - Dedicated workspace
+    - Power offs are well executed
+    - Avoid procrastination and form a habit of learning
+    - Schedule work time and set exact end time for each day
+    - Find ways to get feedback
+15. **Stakes and rewards**
+    - Your learning needs to be tied to a positive outcome to maintain motivation
+    - Something should be on the line to give you drive
+    - Strategy - decide on a goal and announce it - put something on the stake if you fail
+16. **Concepts vs Facts**
+    - Build concepts by revision
+    - Test your recalling capability when you revise
+    - Read the full book in first run -> read highlighted parts/notes in next run -> read less and recall more as you move forward
+17. **Test yourself**
+    - Quiz yourself periodically to test your knowledge
+    - Write summaries of things you just learned to check if you are able to recall information
+    - If you get something wrong, write down why you got it wrong and learn from your mistakes
+18. **The First 20 hours**
+    - Things that we can do in the first 20 hours can help us on our path to mastery
+    - Create a roadmap
+    - Define Practice drills or tests
+    - Attach stakes/rewards to it
+    - Use Pomodoro technique
     
-
-
+---
 
 Happy Learning!!
-![Learning](https://i.giphy.com/media/8dYmJ6Buo3lYY/source.gif)
 
-You can connect with me at &nbsp;
-[LinkedIn](https://www.linkedin.com/in/abh1navv)
-[Twitter/@abh1navv](https://www.twitter.com/abh1navv)
