@@ -1,4 +1,4 @@
-# Learning to Learn : Zero to Mastery
+## Learning to Learn : Zero to Mastery
 
 
 As individuals who take initiatives to improve our abilities and become a better version of ourselves, our learning can become much more effective and faster if we develop an efficient learning process. Below is a list of principles which will help us in defining such processes:
@@ -9,7 +9,7 @@ These are notes from the course [Learning to Learn [Efficient Learning] : Zero t
 ### The Principles
 
 1. **Learning vs Winning**
-    - priotitize long-term learning over short term results
+    - prioritize long-term learning over short term results
     - [The Lesson to Learn](http://paulgraham.com/lesson.html) by Paul Graham
 
     >  In theory you shouldn't have to prepare for a test in a class any more than you have to prepare for a blood test.
@@ -24,13 +24,13 @@ These are notes from the course [Learning to Learn [Efficient Learning] : Zero t
 
     > Enjoy sucking at something at first
 
-3. **Quiting is ok**
+3. **Quitting is ok**
     - it is possible that the path is not for you
     - it is important to know when to quit in order to find the things better suited to you
 
     > Sometimes we have to know when to turn around and pick the right path in order to use our resources efficiently.
 
-4. **Compoud learning**
+4. **Compound learning**
     - learn in small chunks every day
 
     > If you improve by 1% every day, in 70 days you're twice as good.
@@ -134,7 +134,7 @@ These are notes from the course [Learning to Learn [Efficient Learning] : Zero t
 ### Science
 
 1. **Focus vs Diffuse mode**
-    - Focus - concentrate on one thing. No mutitasking.
+    - Focus - concentrate on one thing. No multitasking.
     - Diffuse - let the brain wander freely. E.g. exercise, sleep, going out.
     - Go back and forth. Focus for a while and diffuse for a while.
     - Grows your brain just like exercise and rest grows your muscles
@@ -207,7 +207,7 @@ These are notes from the course [Learning to Learn [Efficient Learning] : Zero t
     - A [small video](https://www.youtube.com/watch?v=1-SvuFIQjK8&ab_channel=DecisionSkills) to summarize this.
 11. **Pays not to be busy**
     - Be surrounded by people you like to relax your brain.
-    - Healthy liesurely time is key to better functioning of the brain.
+    - Healthy leisurely time is key to better functioning of the brain.
     - Learn with ease and do not rush through it
     - [Read more](https://www.calnewport.com/blog/2011/11/11/if-youre-busy-youre-doing-something-wrong-the-surprisingly-relaxed-lives-of-elite-achievers/)
 12. **Chunking**
@@ -221,7 +221,7 @@ These are notes from the course [Learning to Learn [Efficient Learning] : Zero t
     - you can have temporary frustration when you think you are not growing in a area
     - Deliberate practice needs:
         1. Specific goals - push yourself to the edge of your limits
-        2. Intense focus - work towards it in focussed mode
+        2. Intense focus - work towards it in focused mode
         3. Immediate feedback - from mentors or peers
         4. Frequent discomfort - when you are not moving forward
     - Start with a discomfort zone and try to bridge the gap. Once you reach a comfort zone, get feedbacks for improvement and define the next step.
@@ -253,12 +253,12 @@ These are notes from the course [Learning to Learn [Efficient Learning] : Zero t
 ### Techniques
 
 1. **Pomodoro**
-    - 25 mins of focus, 5 mins of rest - together known as 1 pomodoro (no hard rule, go slightly longer if it suits you but not too long)
+    - 25 mins of focus, 5 mins of rest - together known as 1 Pomodoro (no hard rule, go slightly longer if it suits you but not too long)
     - use a timer/stopwatch to repeat like [Tomatoes](http://www.tomato.es/)
     - good way to prevent procrastination as its difficult to lose focus in 25 mins
-    - start with the hardest task in every pomodoro and then move on to easier tasks
+    - start with the hardest task in every Pomodoro and then move on to easier tasks
     - Rest time means you do not do anything brain intensive. Do not look at your phone or read articles on the web. Maybe close your eyes or get something to eat or walk around in the house. Try to avoid pen, paper and screen at all costs.
-    - You do not have to do pomodoros all day. You only do it when you need to work and its fine to do other stuff in between. E.g. you can work for 1 hour doing 2 pomodoros -> watch an episode of your favorite show -> get back to work
+    - You do not have to do Pomodoro all day. You only do it when you need to work and its fine to do other stuff in between. E.g. you can work for 1 hour doing 2 rounds of Pomodoro -> watch an episode of your favorite show -> get back to work
     - Just know that 25 mins of focus and 5 mins of complete rest is your strategy whenever you sit down to work.
     - Sometimes your brain will not stop thinking about the work in those 5 mins. Its fine. Practice will make it perfect.
 
@@ -267,21 +267,21 @@ These are notes from the course [Learning to Learn [Efficient Learning] : Zero t
     - Using chunks together gives you meaningful knowledge.
     - Same as habits - gets you to auto-pilot mode.
     - Divide and conquer the subject
-    - Learn most commonly used chunks first. It helps you quickstart on new things. 
+    - Learn most commonly used chunks first. It helps you quick started on new things and builds a base for stronger concepts
     - When starting on a subject, break it down into a page of chunks
     - Prefer books/courses with small chapters.
 3. **Spaced Repetition**
     - forgetting curve - the more times a concept is repeated, the longer it takes to forget it.
 4. **Deliberate Practice**
-    - Create a pomodoro each day for something unique(+1)
+    - Create a Pomodoro each day for something unique(+1)
     - Write down this special achievement in an excel
     - Define the +1 for the next day
 5. **Roadmap**
-    - Coggle
     - Long term roadmap for specific achievements
     - Take special time out to create the roadmap before starting to learn
     - Have a well-defined purpose
     - Could change on the way but you are at least not starting blind
+    - [Coggle](https://coggle.it)
 6. **Interleaving**
     - different problems in sessions for variety
     - shift between 3 or more skills/techniques to learn them
@@ -307,7 +307,7 @@ These are notes from the course [Learning to Learn [Efficient Learning] : Zero t
     - Capture your streaks at dontbreakthechain.com
 10. **System vs Goals**
     - System - do something regularly with the objective that you are improving
-    - Goal - end result - rigid objective - define a deadline and an objective to acheive by that deadline
+    - Goal - end result - rigid objective - define a deadline and an objective to achieve by that deadline
     - Balance out both techniques
 11. **Senses**
     - Imagery in your mind helps
@@ -351,6 +351,13 @@ These are notes from the course [Learning to Learn [Efficient Learning] : Zero t
     - Use Pomodoro technique
     
 ---
-
+   
 Happy Learning!!
 
+![Learning](https://i.giphy.com/media/8dYmJ6Buo3lYY/source.gif)
+
+You can connect with me at &nbsp;
+
+[LinkedIn](https://www.linkedin.com/in/abh1navv)
+
+[Twitter/@abh1navv](https://www.twitter.com/abh1navv)
