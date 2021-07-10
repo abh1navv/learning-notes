@@ -1,4 +1,4 @@
-## Learning to Learn : Zero to Mastery
+# Learning to Learn : Zero to Mastery
 
 
 As individuals who take initiatives to improve our abilities and become a better version of ourselves, our learning can become much more effective and faster if we develop an efficient learning process. Below is a list of principles which will help us in defining such processes:
@@ -6,7 +6,7 @@ As individuals who take initiatives to improve our abilities and become a better
 These are notes from the course [Learning to Learn [Efficient Learning] : Zero to Mastery](https://www.udemy.com/course/learning-to-learn-efficient-learning-zero-to-mastery/)
 
 
-## The Principles
+### The Principles
 
 1. **Learning vs Winning**
     - priotitize long-term learning over short term results
@@ -131,7 +131,7 @@ These are notes from the course [Learning to Learn [Efficient Learning] : Zero t
 
 ---
 
-## Science
+### Science
 
 1. **Focus vs Diffuse mode**
     - Focus - concentrate on one thing. No mutitasking.
@@ -250,7 +250,7 @@ These are notes from the course [Learning to Learn [Efficient Learning] : Zero t
     - Learn to get bored - gives your brain a pause
 ---
 
-## Techniques
+### Techniques
 
 1. **Pomodoro**
     - 25 mins of focus, 5 mins of rest - together known as 1 pomodoro (no hard rule, go slightly longer if it suits you but not too long)
