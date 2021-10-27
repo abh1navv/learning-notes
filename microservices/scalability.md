@@ -39,7 +39,33 @@ An application is generally created using multiple software components. We talk 
 
 {% twitter 1448261875947425793 %}
 
-Note: You may have heard about Microservices architecture. For all practical purposes, a single microservice is an application in itself and has a N-tier(N>=2) architecture of its own. Just like a slice of Pizza is also a Pizza and contains all the same layers.
+So, from the N-tier architecture, we know that there will be multiple backend components supporting the application. They will be divided into tiers and each tier will be physically isolated from the other tiers.
+
+**Scaling can be applied to each physical tier separately**. Each tier can be scaled in its own way and the entire application can have a mix and match of components with different scaling capabilities.
+
+**Note**: You may have heard about Microservices architecture. For all practical purposes, a single microservice is an application in itself and has a N-tier architecture of its own. Just like a slice of Pizza is a Pizza itself and only varies in size.
+
+So what's left now is to decide how each tier is going to scale.
+
+## Vertical vs Horizontal scaling
+
+Below is a comparison of vertical and horizontal scaling based on few desirable parameters.
+
+### Where do horizontal systems perform better?
+1. Hardware Limitations - Horizontal scaling has no hardware limitations at all and it is possible to scale to as many servers as required. While vertical scaling has an upper limit.
+
+2. Deployment Downtimes - Having one server means that deployment downtimes are likely. Deployment downtimes can be minimized in a vertical system which has a backup server only used during deployments. However, in a horizontal system, the downtimes can practically be reduced to zero. Code can be deployed to servers in batches and they can be taken offline during the deployment while other servers take the load.
+
+3. Fault tolerance - It is the ability of a system to continue working (sometimes with reduced performance) when one or more of its components fail. Here too, horizontal systems perform better. If one server fails, only a part of the system's capacity is lost and it can still remain fully functional. There *may* be some reduction in performance till the fault is resolved. In a vertical system, it fails miserably and needs immediate repair.
+
+### Where do vertical systems perform better?
+
+1. Cost - Cost comparison isn't very straightforward in the vertical vs horizontal battle. If availability of a system is a concern and results in loss of revenue, the vertical systems do not guarantee to be cost-effective. However, for initial costs, vertical scaling looks cost-effective. You only use what you absolutely need. Moreover, you save a lot of money on other infrastructure - network, virtualization technology, load balancers and sometimes people(administrators).
+
+2. Simplicity
+
+
+
 
 
 
