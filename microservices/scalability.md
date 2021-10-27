@@ -1,4 +1,4 @@
-# Scalability
+# Introduction to Scaling
 
 Scalability is one of the top concerns when it comes to designing software systems. Applications are generally created with the objective that someday there will be a large number of users using them. 
 
@@ -10,22 +10,26 @@ However, the initial application does not need to support a large number of user
 > > -- <cite>Gartner</cite>
 
 Let's reiterate the keywords:
-1. Ability - As stated earlier, does not have to be super strong at the beginning, but should be able to evolve when needed.
+1. **Ability** - As stated earlier, does not have to be super strong at the beginning, but should be able to evolve when needed.
 
-2. Increase or decrease - Upwards isn't the only direction. To optimize the cost, it needs to shrink too otherwise we will be spending more on resources and reducing our profits.
+2. **Increase or decrease** - Upwards isn't the only direction. To optimize the cost, it needs to shrink too otherwise we will be spending more on resources and reducing our profits.
 
-3. In response to changes in demand - Demand can be divided into two parts. It's not only the users that can increase, but we also want to occasionally add features. The application needs to monitor the impact of user/feature changes and scale accordingly - whether automatically or through manual intervention.
+3. **In response to changes in demand** - Demand can be divided into two parts. It's not only the users that can increase, but we also want to occasionally add features. The application needs to monitor the impact of user/feature changes and scale accordingly - whether automatically or through manual intervention.
 
 
 ## Types of scaling
 
 Imagine that the house(the resource) you're living in was turning out to be smaller for your needs. People(users) in the house increase as life goes on and furnitures(features) increase too as the standard of living goes up. Now you want to expand your house for comfort. There are typically two options
 
-1. Upwards - You decide to create another floor above your house and it solves the issue. This is called **Vertical Scaling**. The users and features remained at the same location but they had a bigger resource supporting it. This is typically equal to adding more physical resources(CPU/Storage/Network upgrages) to an existing server so that it can perform well against increase in demand.
+### Upwards 
+
+You decide to create another floor above your house and it solves the issue. This is called **Vertical Scaling**. The users and features remained at the same location but they had a bigger resource supporting it. This is typically equal to adding more physical resources(CPU/Storage/Network upgrages) to an existing server so that it can perform well against increase in demand.
 
 However, you cannot keep creating another floor every time you need to expand. Someday, the strength of the  house will become a limitation. In the same way, the limit to which physical resources can be increased is also fixed. Lets look at another way to tackle this problem.
 
-2. Outwards - You decide to buy/create another apartment and some of your family members and their things can shift into it. This is called **Horizontal scaling**. You increase the resources so that the all the load does not come to one resource. This is achieved by adding servers with similar capabilities and a load balancer which divides the user requests among servers.
+### Outwards 
+
+You decide to buy/create another apartment and some of your family members and their things can shift into it. This is called **Horizontal scaling**. You increase the resources so that the all the load does not come to one resource. This is achieved by adding servers with similar capabilities and a load balancer which divides the user requests among servers.
 
 Now the problem and limitations that we had with vertical scaling is removed in horizontal scaling, we can buy as many apartments as we need (assuming that the apartments are available...but not overthinking it further)
 
@@ -36,8 +40,6 @@ We will compare the two options but before that let's understand what is being s
 ## What are we scaling?
 
 An application is generally created using multiple software components. We talk about tiered architectures. Most of the applications are created using some variation of 3-tier or N-tier architectures. If you want to learn/revise these architectures, check out this [thread by Jon Jackson](https://twitter.com/iamjonjackson/status/1448261875947425793)
-
-{% twitter 1448261875947425793 %}
 
 So, from the N-tier architecture, we know that there will be multiple backend components supporting the application. They will be divided into tiers and each tier will be physically isolated from the other tiers.
 
@@ -51,23 +53,38 @@ So what's left now is to decide how each tier is going to scale.
 
 Below is a comparison of vertical and horizontal scaling based on few desirable parameters.
 
-### Where do horizontal systems perform better?
-1. Hardware Limitations - Horizontal scaling has no hardware limitations at all and it is possible to scale to as many servers as required. While vertical scaling has an upper limit.
-
-2. Deployment Downtimes - Having one server means that deployment downtimes are likely. Deployment downtimes can be minimized in a vertical system which has a backup server only used during deployments. However, in a horizontal system, the downtimes can practically be reduced to zero. Code can be deployed to servers in batches and they can be taken offline during the deployment while other servers take the load.
-
-3. Fault tolerance - It is the ability of a system to continue working (sometimes with reduced performance) when one or more of its components fail. Here too, horizontal systems perform better. If one server fails, only a part of the system's capacity is lost and it can still remain fully functional. There *may* be some reduction in performance till the fault is resolved. In a vertical system, it fails miserably and needs immediate repair.
-
-### Where do vertical systems perform better?
-
-1. Cost - Cost comparison isn't very straightforward in the vertical vs horizontal battle. If availability of a system is a concern and results in loss of revenue, the vertical systems do not guarantee to be cost-effective. However, for initial costs, vertical scaling looks cost-effective. You only use what you absolutely need. Moreover, you save a lot of money on other infrastructure - network, virtualization technology, load balancers and sometimes people(administrators).
-
-2. Simplicity
+### Advantages of horizontal scaling
 
 
+**No Hardware Limitations**
 
+Horizontal scaling has no hardware limitations at all and it is possible to scale to as many servers as required. While vertical scaling has an upper limit.
 
+**Deployment Downtimes** 
 
+Having one server means that deployment downtimes are likely. Deployment downtimes can be minimized in a vertical system which has a backup server only used during deployments. However, in a horizontal system, the downtimes can practically be reduced to zero. Code can be deployed to servers in batches and they can be taken offline during the deployment while other servers take the load.
+
+**Fault tolerance** 
+
+It is the ability of a system to continue working (sometimes with reduced performance) when one or more of its components fail. Here too, horizontal systems perform better. If one server fails, only a part of the system's capacity is lost and it can still remain fully functional. There *may* be some reduction in performance till the fault is resolved. In a vertical system, it fails miserably and needs immediate repair.
+
+### Advantages of vertical scaling
+
+**Initial Cost** 
+
+For initial costs, vertical scaling looks cost-effective. You only use what you absolutely need. Moreover, you save a lot of money on other infrastructure - network, virtualization technology, load balancers and sometimes people(administrators).
+
+Cost comparison isn't very straightforward in the vertical vs horizontal battle. If availability of a system is a concern and results in loss of revenue, the vertical systems do not turn out to be cost-effective.
+
+**Maintenance** 
+
+Multiple servers are harder to maintain. Additional complexity is added when load balancers are added. Deployment strategies need to be created and followed. 
+
+### Miscellaneous advice
+- Design with the intent that the application has to grow eventually.
+- Design your application to be easily replicable from one server to another when the need arises. 
+- Containerization and serverless solutions can make horizontal scaling cheaper. Start with cloud solutions unless you already own private infrastructure.
+- Scaling has to be maintained at every backend tier. Think about each component - Database servers have to scale too and not just the application.
 
 
 
