@@ -24,7 +24,21 @@ It forms the core of the application. It's objective is to cater to the requests
 
 Below is a small word cloud of the responsibilities of a business logic layer. The responsibilities can vary from one use case to another.
 
-![Components of Business Logic layer](https://raw.githubusercontent.com/abh1navv/learning-notes/master/microservices/images/business-logic-components.jpg)
+![Components of Business Logic layer](https://raw.githubusercontent.com/abh1navv/learning-notes/master/microservices/images/business-logic-components.png)
+
+**Backing services**
+
+These are services which support the business logic. They each serve a specific purpose and provide data/services to the application. They interact with the business logic layer and are replaceable as long as the communication contract between the two layers is maintained. A few examples:
+1. Data sources
+2. Cache aside servers like Redis
+3. Notification services
+4. Another service like a payment gateway
+5. In microservices context, another microservice.
+
+**Note**: The terminology used for this layer is different across the internet but I like to use the term Backing Services to remain consistent with the terminology used by [12-factor app methodology.](https://12factor.net/backing-services)
+
+### Principles
+
 
 
 ## Problems in traditional software architectures
