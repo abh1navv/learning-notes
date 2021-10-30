@@ -35,7 +35,15 @@ These are services which support the business logic. They each serve a specific 
 
 The intent is to make the core of our application immune to changes in the communication with other layers. Those concerns are to be handled at the boundary of our hexagon.
 
-**Note** - Hexagonal is just a term that has stuck with the architecture for simplicity. It is not to be misunderstood as the application having 6 components or the business logic layer having 6 ports. 
+**Ports**
+
+**Adapters**
+
+**Note** - Hexagonal is just a term that has stuck with the architecture for simplicity. It is not to be misunderstood as the business logic layer having 6 ports. There can be many more sides to the polygon as per the services required to connect
+
+## Code examples
+
+
 
 
 
