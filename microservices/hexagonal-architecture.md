@@ -35,13 +35,26 @@ These are services which support the business logic. They each serve a specific 
 
 The intent is to make the core of our application immune to changes in the communication with other layers. Those concerns are to be handled at the boundary of our hexagon.
 
+![Ports and adapters](https://raw.githubusercontent.com/abh1navv/learning-notes/master/microservices/images/ports-and-adapters.jpg)
+
 **Ports**
+
+Ports are what our core application interacts with. Ports stay consistent for the inner application no matter what happens outside them. They are *interfaces* that the inner components interact with without knowing whats being plugged into them.
 
 **Adapters**
 
+Ports are staying consistent but we still want to be able to plug multiple applications to them when needed. These applications could have different needs and may not comply with the interface defined by the ports. This is where out adapters come in. Their purpose is to convert the data provided by the outer applications into a format digestible for the inner application.
+
+
+
 **Note** - Hexagonal is just a term that has stuck with the architecture for simplicity. It is not to be misunderstood as the business logic layer having 6 ports. There can be many more sides to the polygon as per the services required to connect
 
-## Code examples
+## Example
+
+Imagine a small application - a REST API which deals with user related details. One of its methods returns user details based on user id provided in the request.
+
+### Code examples
+
 
 
 
