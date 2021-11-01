@@ -61,10 +61,155 @@ When the request reaches the inner application, it is consistent with the interf
 - The port forwards the response to the adapter it received the request from.
 - The adapter converts the response into a format suitable for the requesting party.
 
-**Database port** - the inner application needs to get some data from the database to fulfil the request. It has two options - to get it from a Redis cache (or read through it) or to get it from a SQL DB.
+**Database port** - the inner application needs to get some data from the database to fulfil the request. Once again, it interacts through a consistent port. And we are able to plug in whichever database we need into that port. The actual DB to be used will be decided at runtime or through configurations. 
+
+Let's see a use case of the Database port through code.
 
 
-### Code examples
+### Let's see some code
+
+**Design Intention** - We want to start with a MySQL database but we are not sure if a different database would be necessary in future. Our code should allow for easy swapping of databases when needed.
+
+**The port (Interface)**
+
+We provide an interface for our core to interact with. The interface performs crud operations.
+
+```java
+public interface UserRepository {
+    void save(User o);
+    void delete(User o);
+    void update(User o);
+    User find(int id);
+}
+```
+
+**Adapter**
+
+MySQL Database adapter
+
+```java
+public class MySqlDatabaseRepository implements UserRepository {
+    @Override
+    public void save(User User) {
+        System.out.println("Saving to database");
+    }
+        
+    @Override
+    public void delete(User User) {
+        System.out.println("Deleting from database");
+    }
+    
+    @Override
+    public void update(User User) {
+        System.out.println("Updating database");
+    }
+    
+    @Override
+    public User find(int id) {
+        System.out.println("Finding in database");
+        return null;
+    }
+}
+```
+**Interacting with the databases**
+
+As we already know, all communication happens using the interfaces. Our core application will not look beyond the `UserRepository` interface.
+
+Let's look at one of our core services. The below class is concerned with getting the user details - either basic or full.
+
+```java
+public class UserDetailsClient {
+    
+    private UserRepository userRepository;
+    
+    public UserDetailsServiceImpl(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+    
+    public BasicDetails getBasicDetails(int id) {
+        User user = userRepository.find(id);
+        return new BasicDetails(user.getName(), user.getEmail());
+    }
+    
+    public FullDetails getFullDetails(int id) {
+        User user = userRepository.find(id);
+        return new FullDetails(user.getName(), user.getEmail(), user.getAddress());
+    }
+ 
+}
+```
+
+Look how it uses an object of the interface and does not care about which specific database works in the background.
+
+Still, we will need to pass into the service the actual implementation. There are a large number of ways to do that - especially with modern frameworks. 
+
+What I have used here is [constructor dependency injection](https://www.tutorialsteacher.com/ioc/dependency-injection) which will hold true for most object-oriented programming languages which use interfaces. Other patterns could be Factory and Strategy patterns.
+
+In my case, the outer layer which tries to get User details will initialize `UserDetailsClient` by passing the required adapter. For e.g.
+
+```java
+UserDetailsClient userDetailsClient = new UserDetailsClient(new MongoDbRepository());
+userDetailsClient.getBasicDetails(userId);
+```
+
+**Swapping databases**
+
+After a while, it was agreed that having a NoSQL database made things easier due to scalability reasons. What was needed in this case was to introduce another adapter for MongoDb database and make it implement the functionalities defined by the port.
+
+MongoDB adapter
+```java
+public class MongoDbRepository implements UserRepository {
+    @Override
+    public void save(User User) {
+        System.out.println("Saving User to mongoDb");
+    }
+    
+    @Override
+    public void delete(User id) {
+        System.out.println("Deleting User from mongoDb");
+    }
+    
+    @Override
+    public void update(User User) {
+        System.out.println("Updating User in mongoDb");
+    }
+
+    @Override
+    public User find(int id) {
+        System.out.println("Finding User in mongoDb");
+        return null;
+    }
+}
+
+```
+
+To use the MongoDb database, the only change required is in the way the `UserDetailsClient` is initialized. Our calling code changes in the below way:
+
+```java
+UserDetailsClient userDetailsClient = new UserDetailsClient(new MongoDbRepository());
+userDetailsClient.getBasicDetails(userId);
+```
+
+### Advantages
+
+1. **Swappable components** - as we can see in the database layer. There could also be other services in the same pattern. For e.g. I could have notification services and swap between emails and SMS whenever needed.
+2. **Separation of business logic** - If implemented well, the hexagonal architecture does not pose a threat to the business rules at the core of the application when outer layers change. 
+3. **Easier testing across ports** - Testing of the core application can be performed around the ports. If needed, mock resources can be introduced using adapters of their own to make unit testing without databases easier.
+
+
+Although hexagonal architecture is not something that is explicitely thought about when designing the architecture of the application, it is often accidentally used throughout modern applications - especially the Java world which revolves around [dependency injection](https://www.freecodecamp.org/news/a-quick-intro-to-dependency-injection-what-it-is-and-when-to-use-it-7578c84fa88f/) and coding to interfaces rather than implementations.
+
+Nowadays, there is a lot of emphasis on configurability and adaptability of applications. It is important to keep the "ports and adapter pattern" in mind in the low-level design process more than the high-level design.
+
+---
+
+Thank you for reading. Hope you enjoyed the article. Please leave any appreciation and suggestions in the comments. If you want to connect with me, you can find me on [Twitter](https://twitter.com/abh1navv)
+
+
+Fun Fact: The code samples are created by Github Co-pilot with little manual intervention.
+
+
+
 
 
 
