@@ -201,13 +201,6 @@ Although hexagonal architecture is not something that is explicitely thought abo
 
 Nowadays, there is a lot of emphasis on configurability and adaptability of applications. It is important to keep the "ports and adapter pattern" in mind in the low-level design process more than the high-level design.
 
----
-
-Thank you for reading. Hope you enjoyed the article. Please leave any appreciation and suggestions in the comments. If you want to connect with me, you can find me on [Twitter](https://twitter.com/abh1navv)
-
-
-Fun Fact: The code samples are created by Github Co-pilot with little manual intervention.
-
 
 
 
